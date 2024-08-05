@@ -16,10 +16,6 @@ Trinity --seqType fq --left all_left.fq.gz --right all_left.fq.gz --CPU 120 --ma
     --gene_prefix Hv \
     --out_prefix out
 
-
-bestGeneModels.pl out.GeneModels.gff3 > bestGeneModels.gff3 2> geneModelsStatistic
-gff3ToGtf.pl genome.fasta bestGeneModels.gff3 > bestGeneModels.gtf
-
 #busco
 busco -i protein.fasta -l insecta_odb10 -o busco_protein -m prot -c 120 --offline 
 
